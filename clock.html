@@ -256,14 +256,73 @@
       background-size: cover;
       z-index: 5000000;
     }
+    #choose{
+      width: 400px;
+      height: 70px;
+      background-color:  orange;
+      position: absolute;
+      top:1070px;
+      z-index: 566666;
+      border-radius: 30px;
+    }
+    #but1{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      position: absolute;
+      background-color: red;
+      top: 9%;
+      left: 30%;
+      z-index: 500000;
+    }
+    #but2{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      position: absolute;
+      background-color: blue;
+      top: 9%;
+      right: 30%;
+      z-index: 500000;
+    }
+    #but3{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      position: absolute;
+      background-color:black;
+      top: 9%;
+      right: 5%;
+      z-index: 500000;
+    }
+    #but4{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      position: absolute;
+      background-color: green;
+      top: 9%;
+      left: 5%;
+      z-index: 500000;
+    }
     
+
+   
 </style>
 </head>
 <body>
+  
   <div id="circle"></div>
   <div id="circle1"></div>
-  
+  <div id="choose">
+    <button type="button" id="but1" ></button>
+    <button type="button" id="but2" ></button>
+    <button type="button" id="but3" ></button>
+    <button type="button" id="but4" ></button>
+  </div>
   <div id="container">
+    
+
     <div id="scale"></div>
     <div id="clock">
       <div class="number">
@@ -335,7 +394,23 @@
         return x;
     }
 
-  
+  var butt1 = document.getElementById("but1");
+  var butt2 = document.getElementById("but2");
+  var butt3 = document.getElementById("but3");
+  var butt4 = document.getElementById("but4");
+  var body = document.body
+  butt1.onclick = function(){
+    body.style.background= `radial-gradient(black,red)`
+  }
+  butt2.onclick = function(){
+    body.style.background= `radial-gradient(green,white)`
+  }
+  butt3.onclick = function(){
+    body.style.background= `radial-gradient(black,white)`
+  }
+  butt4.onclick = function(){
+    body.style.background= `radial-gradient(blue,skyblue)`
+  }
   
 </script>
 </body>
