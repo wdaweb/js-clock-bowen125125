@@ -11,6 +11,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
   <style>
     html,body{
       height: 100%;
@@ -23,15 +24,17 @@
       background: radial-gradient(black, rgb(73, 73, 73));
       border: 0;
       font-family: 'Orbitron', sans-serif;
-      /* animation: gredient 1s 1s infinite; */
+     
     }
-    @keyframes gredient {
-      from {
-        background: radial-gradient(black, rgb(93, 93, 93));
-      }
-      to {
-        background: radial-gradient(red,blue);
-      }
+    
+    #bigg{
+      position: relative;
+      width: 1300px;
+      height: 1300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
     }
     #circle{
       width: 1300px;
@@ -60,14 +63,14 @@
     #container{
       width: 750px;
       height: 750px;
-      box-shadow: inset 0px 0px 20px 15px rgb(0, 0, 0);
+      box-shadow: inset 0px 0px 20px 15px rgba(0, 0, 0);
       padding: 20px;
       text-align: center;
       border-radius: 50%;
       position: relative;
       background-image: url(./clock_image/—Pngtree—skull_617182.png) ;
       background-repeat: no-repeat;
-      background-color: rgb(51, 146, 106);
+      background-color: white;
       background-position: 50% 36%;
       background-size: 1100px 1100px;
       /* animation: fadeout 5s 1s 1 linear forwards;
@@ -202,11 +205,14 @@
         background-color: rgb(240, 240, 240); 
         padding-bottom: 8px;
         box-shadow: inset 5px 5px 48px 40px black,
-                          /* 0px 0px 5px 5px rgba(0, 0, 0, 0.5), */
+                          
                           
                           0px 0px 3px 3px greenyellow,
                           0px 0px px px rgb(197, 221, 161);
         animation: colorchange 12s 0s linear alternate infinite;                                       
+    }
+    #screen:hover{
+      transform: scale(1.5);
     }
     @keyframes colorchange {
       0%{
@@ -256,69 +262,223 @@
       background-size: cover;
       z-index: 5000000;
     }
-    #choose{
-      width: 400px;
-      height: 70px;
-      background-color:  orange;
+    #choose1{
+      width: 350px;
+      height: 60px;
+     
       position: absolute;
-      top:1070px;
+      bottom: 25%;
+      right:-5%;
+      border: 8px double rgb(251, 251, 251);
       z-index: 566666;
       border-radius: 30px;
+      transform: rotate(120deg);
+      box-shadow:  5px -5px 3px 3px rgb(30, 31, 12);
+      /* animation: boom1 0.3s 1s infinite alternate;            */
+    }
+    @keyframes boom {
+      from{
+        transform: scale(1) ;
+        
+      }
+      to{
+        transform: scale(1.03) ;
+      }
+    }
+    #choose2{
+      width: 350px;
+      height: 60px;
+     
+      position: absolute;
+      bottom: 25%;
+      left:-5%;
+      border: 8px double rgb(251, 251, 251);
+      z-index: 566666;
+      border-radius: 30px;
+      transform: rotate(60deg);
+      box-shadow:  5px -5px 3px 3px rgb(30, 31, 12);
+                 
+    }
+    
+     
+    button {
+      box-shadow: 0px 6px 2px 2px rgb(83, 83, 83);
+      transform: rotate(270deg);
+      outline: none;
+      width: 45px;
+      height: 45px;
+    }
+    button:active{
+      transform: translateX(5px) rotate(270deg);
+      box-shadow: 0px 3px 2px 2px rgb(51, 51, 51);
+    }
+    button:hover{
+      cursor: pointer;
     }
     #but1{
-      width: 60px;
-      height: 60px;
+     
       border-radius: 50%;
       position: absolute;
-      background-color: red;
-      top: 9%;
-      left: 30%;
+      background-color: black;
+      top: 15%;
+      left: 7%;
       z-index: 500000;
+      
     }
     #but2{
-      width: 60px;
-      height: 60px;
       border-radius: 50%;
       position: absolute;
-      background-color: blue;
-      top: 9%;
-      right: 30%;
+      background-color: rgb(19, 19, 149);
+      top: 15%;
+      left: 32%;
       z-index: 500000;
     }
     #but3{
-      width: 60px;
-      height: 60px;
+     
       border-radius: 50%;
       position: absolute;
-      background-color:black;
-      top: 9%;
-      left: 5%;
+      background-color:rgb(141, 14, 14);
+      top: 15%;
+      right: 30%;
       z-index: 500000;
     }
     #but4{
-      width: 60px;
-      height: 60px;
+     
       border-radius: 50%;
       position: absolute;
-      background-color: green;
-      top: 9%;
+      background-color: rgb(22, 109, 22);
+      top: 15%;
       right: 5%;
       z-index: 500000;
     }
-
+    #but5{
+     
+      border-radius: 50%;
+      position: absolute;
+      background-color: purple;
+      top: 15%;
+      left: 7%;
+      z-index: 500000;
+      
+    }
+    #but6{
+      border-radius: 50%;
+      position: absolute;
+      background-color: rgb(230, 230, 230);
+      top: 15%;
+      left: 32%;
+      z-index: 500000;
+    }
+    #but7{
+     
+      border-radius: 50%;
+      position: absolute;
+      background-color:rgb(143, 78, 35);
+      top: 15%;
+      right: 30%;
+      z-index: 500000;
+    }
+    #but8{
+     
+      border-radius: 50%;
+      position: absolute;
+      background-color: rgb(219, 173, 181);
+      top: 15%;
+      right: 5%;
+      z-index: 500000;
+    }
+    i{
+      color: rgb(251, 243, 227);
+      font-size: 25px;
+      
+    }
+    
+    #weekcontent{
+      position: absolute;
+      top:17.8%;
+      left: 4.8%;
+      border-radius: 50%;
+      width: 260px;
+      height: 260px;
+      border: 3px solid rgb(170, 169, 169);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000000;
+      background-color: white;
+      box-shadow: inset 3px 3px 3px 3px rgb(93, 93, 93),
+                  inset -2px -2px 3px 3px rgb(233, 231, 231);
+      background: linear-gradient(white,white,rgb(202, 202, 202));          
+    }
+    #weekday{      
+      font-size: 120px;
+      text-shadow: 5px 5px 5px rgb(102, 100, 100);
+    }
+    #weekcircle{
+      position: absolute;
+      top:16.5%;
+      left: 3.5%;
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;     
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url(./clock_image/Daco_590513.png);
+      background-size: cover;
+      animation: run 30s 0s infinite reverse linear;
+    }
+    #bounce{
+      width: 50px;
+      height: 50px;
+      background-color: black;
+      position: absolute;
+      left: 22%;
+      top: 50%;
+      border-radius: 50%;
+      transform: rotate(360deg);
+    }
+    #bounce:active{
+      transform: rotate(360deg)translateY(3px);
+    }
+    #bounce:hover{
+      opacity: 0.8;
+    }
+    #rotate{
+      width: 50px;
+      height: 50px;
+      background-color: black;
+      position: absolute;
+      top: 50%;
+      right: 22%;
+      border-radius: 50%;
+      transform: rotate(360deg);
+    }
+    #rotate:active{
+      transform: rotate(360deg)translateY(3px);
+    }
+    #rotate:hover{
+      opacity: 0.8;
+    }
 
    
 </style>
 </head>
 <body>
-  
+ <div id="bigg">
   <div id="circle"></div>
   <div id="circle1"></div>
-  <div id="choose">
-    <button type="button" id="but1" ></button>
-    <button type="button" id="but2" ></button>
-    <button type="button" id="but3" ></button>
-    <button type="button" id="but4" ></button>
+  <div id="choose1">
+    <button type="button" id="but1" ><i class="fas fa-skull"></i></button>
+    <button type="button" id="but2" ><i class="fas fa-skull"></i></button>
+    <button type="button" id="but3" ><i class="fas fa-skull"></i></button>
+    <button type="button" id="but4" ><i class="fas fa-skull"></i></button>
+  </div>
+  <div id="choose2">
+    <button type="button" id="but5" ><i class="fas fa-skull"></i></button>
+    <button type="button" id="but6" ><i class="fas fa-skull" style="color: black;"></i></button>
+    <button type="button" id="but7" ><i class="fas fa-skull"></i></button>
+    <button type="button" id="but8" ><i class="fas fa-skull"></i></button>
   </div>
   <div id="container">
     
@@ -347,9 +507,16 @@
   </div>
    <div id="screen">
      <span id="timer"></span>
-  
    </div>
   </div>
+  <div id="weekcircle"></div>
+  <div id="weekcontent">
+    <span id="weekday"></span>
+  </div>
+  <button id= "bounce"><i class="fab fa-napster"></i></button>
+  <button id= "rotate"><i class="fas fa-circle-notch"></i></button>
+ </div> 
+  
  
 <script>
   const hour = document.getElementById("hour");
@@ -398,19 +565,69 @@
   var butt2 = document.getElementById("but2");
   var butt3 = document.getElementById("but3");
   var butt4 = document.getElementById("but4");
+  var butt5 = document.getElementById("but5");
+  var butt6 = document.getElementById("but6");
+  var butt7 = document.getElementById("but7");
+  var butt8 = document.getElementById("but8");
   var body = document.body
   butt1.onclick = function(){
-    body.style.background= `radial-gradient(black,red)`
+    body.style.background= `radial-gradient(black ,rgb(50,50,50))`
   }
   butt2.onclick = function(){
-    body.style.background= `radial-gradient(green,white)`
+    body.style.background= `linear-gradient(blue,rgb(7, 1, 101))`
   }
   butt3.onclick = function(){
-    body.style.background= `radial-gradient(black,white)`
+    body.style.background= `linear-gradient(rgb(180, 0, 0) 60%,orange,rgb(227, 226, 0))`
   }
   butt4.onclick = function(){
-    body.style.background= `radial-gradient(blue,skyblue)`
+    body.style.background= `linear-gradient(rgb(7, 152, 21),rgb(7, 65, 21))`
   }
+  butt5.onclick = function(){
+    body.style.background= `linear-gradient(skyblue,purple)`
+  }
+  butt6.onclick = function(){
+    body.style.background= `linear-gradient(white,grey)`
+  }
+  butt7.onclick = function(){
+    body.style.background= `linear-gradient(rgb(174, 124, 66),rgb(99, 68, 61))`
+  }
+  butt8.onclick = function(){
+    body.style.background= `linear-gradient(rgb(255, 222, 228),pink,rgb(242, 131, 202))`
+  }
+  
+  
+    const weekday = document.getElementById("weekday")
+
+    var   s   =  new Date()
+    var week;
+    
+    if(new Date(s).getDay()==0) week="Sun"
+    if(new Date(s).getDay()==1) week="Mon"
+    if(new Date(s).getDay()==2) week="Tue"
+    if(new Date(s).getDay()==3) week="Wed"
+    if(new Date(s).getDay()==4) week="Thu"
+    if(new Date(s).getDay()==5) week="Fri"
+    if(new Date(s).getDay()==6) week="Sat"
+
+    weekday.innerHTML = week
+    weekday.style.textShadow = `20px 20px 20px 20px  red` 
+    
+    var circle = document.getElementById("circle")
+    var circle1 = document.getElementById("circle1")
+    var weekcircle = document.getElementById("weekcircle")
+    var bounce = document.getElementById("bounce")
+    var rotate = document.getElementById("rotate")
+
+    bounce.onclick=  function(){
+      circle.style.animation= `boom 0.25s 0s infinite alternate`
+      circle1.style.animation= `boom 0.25s 0s infinite alternate`
+      weekcircle.style.animation= `boom 0.25s 0s infinite alternate`
+    }
+    rotate.onclick =function(){     
+      circle.style.animation=`run reverse 80s 0s infinite linear`
+      circle1.style.animation=`run  50s 0s infinite linear `
+      weekcircle.style.animation=`run 30s 0s infinite reverse linear`
+    }
   
 </script>
 </body>
