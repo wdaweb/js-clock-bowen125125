@@ -12,7 +12,8 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
   <link rel="stylesheet" href="./fontawesome/css/all.css">
-  <link rel="stylesheet" href="./fontawesome/css/all.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap" rel="stylesheet">
   <style>
     html,body{
       height: 100%;
@@ -445,12 +446,14 @@
       box-shadow: inset 3px 3px 3px 3px rgb(93, 93, 93),
                   inset -2px -2px 3px 3px rgb(233, 231, 231);
       background: linear-gradient(white,white,rgb(202, 202, 202));
-      animation: 
-      rollIn 3s 1s 1 linear backwards;          
+      /* animation:  */
+      /* rollIn 3s 1s 1 linear backwards;           */
     }
     #weekday{      
-      font-size: 120px;
+      font-size: 100px;
       text-shadow: 5px 5px 5px rgb(102, 100, 100);
+      position: absolute;
+      top: 20%;
     }
     
     #bounce{
@@ -461,16 +464,16 @@
       left: 22%;
       top: 50%;
       border-radius: 50%;
-      transform: rotate(360deg);
+      transform: none;
       animation: fadeInUp 5s 0s 1 ;
 
     }
     #bounce:active{
-      transform: rotate(360deg) translateX(12px);
+      transform:  translateY(12px);
     }
     #bounce:hover{
       
-      transform: rotate(360deg)translateY(-6px);
+      transform: translateY(-6px);
       box-shadow:  0px 6px 2px 2px rgb(83, 83, 83),
                    0px 11px 2px 2px    black   }
     #rotate{
@@ -531,8 +534,7 @@
       border-top-left-radius: 10%;
       font-size: 30px;
       font-family: 'Orbitron', sans-serif;
-      background: white;
-      /* text-shadow: 5px 5px 5px rgb(121, 120, 120); */
+      background: linear-gradient(130deg,white,white,rgb(209, 209, 209));
       box-shadow: 
                   0px 5px 1px 3px rgb(133, 133, 133) ;
     }
@@ -575,7 +577,7 @@
       border-top-left-radius: 10%;
       font-size: 30px;
       font-family: 'Orbitron', sans-serif;
-      background: white;
+      background: linear-gradient(130deg,white,white,rgb(209, 209, 209));
       /* text-shadow: 5px 5px 5px rgb(121, 120, 120); */
       box-shadow: 
                   0px 5px 1px 3px rgb(133, 133, 133) ;
@@ -619,8 +621,7 @@
       border-top-left-radius: 10%;
       font-size: 30px;
       font-family: 'Orbitron', sans-serif;
-      background: rgb(255, 255, 255);
-      /* text-shadow: 5px 5px 5px rgb(121, 120, 120); */
+      background: linear-gradient(130deg,white,white,rgb(209, 209, 209));
       box-shadow: 
                   0px 5px 1px 3px rgb(133, 133, 133) ;
     }
@@ -665,7 +666,58 @@
       transform: translateY(8px);
       color: black;
     }
+    #countopen{
+      position: absolute;
+      display: inline-block;
+      bottom: 15%;
+      width: 150px;
+      height: 45px;
+      border: 1px solid rgb(87, 87, 87);
+      transform: rotate(0deg);
+      box-shadow: none;
+      box-shadow: 0px -2px 4px 1px rgb(163, 163, 163),
+                  0px 2px  4px 1px  white,
+                  0px 4px  4px 1px  grey;
+      border-radius: 20px;
+      background: linear-gradient(white,rgb(170, 170, 170));
+    }
+    #countopen i::after {
+    font-family: 'Noto Sans TC', sans-serif;
+    content: '倒數';
+    position: absolute;
+    opacity: 0;
+    top: 12%;
+    right: -21px;
+    transition-duration: 0.5s;
+    }
+    #countopen i{
+      transition-duration: 0.5s;
+    }
+    #countopen:hover i::after{
+      opacity: 1;
+      right: 20%;
+    }
+    #countopen:hover{
+      box-shadow: inset 0px 0px 5px 2px grey,
+      0px -2px 4px 1px rgb(163, 163, 163),
+                  0px 2px  4px 1px  white,
+                  0px 4px  4px 1px  grey;
+    }
+    #countopen:hover i{
+      padding-right: 80px;
+      transition-duration: 0.5s;
+      animation: none;
+    }
     
+    #countopen:active{
+      box-shadow: 
+      0px -2px 4px 1px rgb(163, 163, 163),
+                  0px 2px  4px 1px  white,
+                  0px 4px  4px 1px  grey;
+      background: radial-gradient(rgb(194, 193, 193),rgb(175, 175, 175),grey);
+      
+      
+    }
     
     
 </style>
@@ -736,11 +788,15 @@
   </div>
   <div id="weekcircle"></div>
   <div id="weekcontent">
+    <button id="countopen"><i class="fas fa-stopwatch" style="color: rgb(59, 59, 59);font-size: 30px;"></i></button>
     <span id="weekday"></span>
   </div>
   <button id= "bounce"><i class="fab fa-napster"></i></button>
   <button id= "rotate"><i class="fas fa-circle-notch"></i></button>
+  
+ 
  </div> 
+ 
   
  
 <script>
@@ -866,7 +922,12 @@
    aus.onclick =function(){
     window.open("australiatime.html","newwindow","height = 300,width = 500, top =300, left =300")
    } 
-  
+  //  倒數功能
+   var countopen = document.getElementById("countopen")
+   var weekcontent = document.getElementById("weekcontent")
+   countopen.onclick =function(){
+   window.open("stopwatch.html","newwindow","height = 450,width = 600, top =300, left =300")
+   }
 </script>
 </body>
 </html>
