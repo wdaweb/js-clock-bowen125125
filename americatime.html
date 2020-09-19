@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <style>
+    body{
+      height: 100%;
+      padding: 0%;
+      margin: 0%;
+    }
+    .container{
+      background-color: black;
+      height: 300px;
+      width: auto;
+      color: rgb(233, 233, 233);
+      text-align: center;
+      font-family: 'Audiowide', cursive;
+      font-size: 75px;
+      position: relative;
+      background-image: url(./clock_image/8-yellow-star-png-image.png);
+      background-size: 100px 90px ;
+      background-repeat: repeat;
+    }
+    
+    
+   
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="./clock_image/american-flag-png-6752.png" alt="" width="80px " height="60px"
+    style="position: absolute;top: 0%; left: 0%;">
+    <span id="year"></span><br>
+    <span id="date"></span><br>
+    <span id="time"></span>
+  </div>
+  
+  <script>
+    
+const year = document.getElementById("year")
+const date = document.getElementById("date")
+const time = document.getElementById("time")
+
+
+setInterval(() => {
+  var options = {       
+  hour12: false,     // 24 小時制
+  timeZone: 'America/New_York' // 美國/紐約
+};
+var now = new Date().toLocaleString('zh-TW', options);
+var nowStr = now.split(' ')[0];
+var amonth   = nowStr.split('/')[1]
+var aday     = nowStr.split('/')[2]
+var atimeStr = now.split(' ')[1];
+var ayear    = nowStr.split('/')[0]
+
+year.innerHTML = ayear
+date.innerHTML = amonth+"/"+aday
+time.innerHTML = atimeStr
+}, 1000);
+
+
+
+  </script>
+</body>
+</html>

@@ -11,7 +11,8 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="./fontawesome/css/all.css">
+  <link rel="stylesheet" href="./fontawesome/css/all.css">
+  <link rel="stylesheet" href="./fontawesome/css/all.css">
   <style>
     html,body{
       height: 100%;
@@ -36,13 +37,15 @@
       align-items: center;
      
     }
+    /* 三圓圈 */
     #circle{
       width: 1300px;
       height: 1300px;
       position: absolute;
       background-image: url(./clock_image/kisspng-the-satanic-bible-church-of-satan-satanism-portabl-pentagram-which-blood-red-sticker-by-marras-5d38aee21b9781.688902111563995874113.png);
       background-size: contain;
-      animation: run reverse 80s 0s infinite linear;
+      animation: run reverse 80s 0s infinite linear,
+      zoomIn 4s 0s 1 ease-out;
     }
     #circle1{
       width: 900px;
@@ -50,8 +53,25 @@
       position: absolute;
       background-image: url(./clock_image/circle1.png);
       background-size: contain;
-      animation: run 50s 0s infinite linear;
+      animation: run 50s 0s infinite linear, 
+      rotateIn 6s 0s 1 linear;
     }
+    #weekcircle{
+      position: absolute;
+      top:16.5%;
+      left: 3.5%;
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;     
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url(./clock_image/Daco_590513.png);
+      background-size: cover;
+      animation: run 30s 0s infinite reverse linear,
+      fadeInDown 3s 1s 1 ease-out backwards;
+    }
+
     @keyframes run {
       from{
         transform: rotate(0deg);
@@ -60,6 +80,16 @@
         transform: rotate(360deg) ;
       }
     }
+    @keyframes boom {
+      from{
+        transform: scale(1) ;
+        
+      }
+      to{
+        transform: scale(1.03) ;
+      }
+    }
+
     #container{
       width: 750px;
       height: 750px;
@@ -73,20 +103,25 @@
       background-color: white;
       background-position: 50% 36%;
       background-size: 1100px 1100px;
-      /* animation: fadeout 5s 1s 1 linear forwards;
-      opacity: 0; */
+      animation: fadd 6s 0s 1;
     }
-    /* @keyframes fadeout {
-      from {
-        opacity: 0;
-        transform: scale(0.2) 
+    @keyframes fadd {
+      from{
+        background-image: url(./clock_image/—Pngtree—skull_617182.png) ;
+      background-repeat: no-repeat;
+      background-color: white;
+      background-position: 50% 36%;
+      background-size: 50px 50px;
+         
+      }to{
+        background-image: url(./clock_image/—Pngtree—skull_617182.png) ;
+      background-repeat: no-repeat;
+      background-color: white;
+      background-position: 50% 36%;
+      background-size: 1100px 1100px;     
       }
-      to{
-        opacity: 1;
-        transform: scale(1) 
-      }
-    }
-     */
+    } 
+    
     #clock{
       
         width:200px;
@@ -145,12 +180,7 @@
       background-size: cover;;
       background-repeat: no-repeat;
     }
-    #scale{
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-    
+      
     #hour{
         position: absolute;
         top:calc(50% - 3px);
@@ -205,8 +235,6 @@
         background-color: rgb(240, 240, 240); 
         padding-bottom: 8px;
         box-shadow: inset 5px 5px 48px 40px black,
-                          
-                          
                           0px 0px 3px 3px greenyellow,
                           0px 0px px px rgb(197, 221, 161);
         animation: colorchange 12s 0s linear alternate infinite;                                       
@@ -264,8 +292,7 @@
     }
     #choose1{
       width: 350px;
-      height: 60px;
-     
+      height: 60px;    
       position: absolute;
       bottom: 25%;
       right:-5%;
@@ -274,21 +301,12 @@
       border-radius: 30px;
       transform: rotate(120deg);
       box-shadow:  5px -5px 3px 3px rgb(30, 31, 12);
-      /* animation: boom1 0.3s 1s infinite alternate;            */
+     
     }
-    @keyframes boom {
-      from{
-        transform: scale(1) ;
-        
-      }
-      to{
-        transform: scale(1.03) ;
-      }
-    }
+    
     #choose2{
       width: 350px;
       height: 60px;
-     
       position: absolute;
       bottom: 25%;
       left:-5%;
@@ -296,8 +314,7 @@
       z-index: 566666;
       border-radius: 30px;
       transform: rotate(60deg);
-      box-shadow:  5px -5px 3px 3px rgb(30, 31, 12);
-                 
+      box-shadow:  5px -5px 3px 3px rgb(30, 31, 12);                
     }
     
      
@@ -307,6 +324,8 @@
       outline: none;
       width: 45px;
       height: 45px;
+    
+
     }
     button:active{
       transform: translateX(5px) rotate(270deg);
@@ -323,7 +342,7 @@
       top: 15%;
       left: 7%;
       z-index: 500000;
-      
+      animation: fadeInDown 2s 0s 1 backwards;
     }
     #but2{
       border-radius: 50%;
@@ -332,6 +351,7 @@
       top: 15%;
       left: 32%;
       z-index: 500000;
+      animation: fadeInDown 2s 1s 1 backwards;
     }
     #but3{
      
@@ -341,6 +361,7 @@
       top: 15%;
       right: 30%;
       z-index: 500000;
+      animation: fadeInDown 2s 2s 1 backwards;
     }
     #but4{
      
@@ -350,6 +371,7 @@
       top: 15%;
       right: 5%;
       z-index: 500000;
+      animation: fadeInDown 2s 3s 1 backwards;
     }
     #but5{
      
@@ -359,7 +381,7 @@
       top: 15%;
       left: 7%;
       z-index: 500000;
-      
+      animation: fadeInUp 2s 0s 1 backwards
     }
     #but6{
       border-radius: 50%;
@@ -368,6 +390,7 @@
       top: 15%;
       left: 32%;
       z-index: 500000;
+      animation: fadeInUp 2s 1s 1 backwards
     }
     #but7{
      
@@ -377,6 +400,7 @@
       top: 15%;
       right: 30%;
       z-index: 500000;
+      animation: fadeInUp 2s 2s 1 backwards
     }
     #but8{
      
@@ -386,11 +410,23 @@
       top: 15%;
       right: 5%;
       z-index: 500000;
+      animation: fadeInUp 2s 3s 1 backwards
     }
     i{
       color: rgb(251, 243, 227);
       font-size: 25px;
+    }
+    i:hover{
+      animation: icon 4s 0s infinite linear;
       
+    }
+    @keyframes icon {
+      from{
+        transform: rotate(0deg)
+      }
+      to{
+        transform: rotate(360deg)
+      }
     }
     
     #weekcontent{
@@ -408,26 +444,15 @@
       background-color: white;
       box-shadow: inset 3px 3px 3px 3px rgb(93, 93, 93),
                   inset -2px -2px 3px 3px rgb(233, 231, 231);
-      background: linear-gradient(white,white,rgb(202, 202, 202));          
+      background: linear-gradient(white,white,rgb(202, 202, 202));
+      animation: 
+      rollIn 3s 1s 1 linear backwards;          
     }
     #weekday{      
       font-size: 120px;
       text-shadow: 5px 5px 5px rgb(102, 100, 100);
     }
-    #weekcircle{
-      position: absolute;
-      top:16.5%;
-      left: 3.5%;
-      border-radius: 50%;
-      width: 300px;
-      height: 300px;     
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-image: url(./clock_image/Daco_590513.png);
-      background-size: cover;
-      animation: run 30s 0s infinite reverse linear;
-    }
+    
     #bounce{
       width: 50px;
       height: 50px;
@@ -437,13 +462,17 @@
       top: 50%;
       border-radius: 50%;
       transform: rotate(360deg);
+      animation: fadeInUp 5s 0s 1 ;
+
     }
     #bounce:active{
-      transform: rotate(360deg)translateY(3px);
+      transform: rotate(360deg) translateX(12px);
     }
     #bounce:hover{
-      opacity: 0.8;
-    }
+      
+      transform: rotate(360deg)translateY(-6px);
+      box-shadow:  0px 6px 2px 2px rgb(83, 83, 83),
+                   0px 11px 2px 2px    black   }
     #rotate{
       width: 50px;
       height: 50px;
@@ -453,19 +482,215 @@
       right: 22%;
       border-radius: 50%;
       transform: rotate(360deg);
+      animation: fadeInUp 5s 0s 1 
     }
     #rotate:active{
-      transform: rotate(360deg)translateY(3px);
+      transform: rotate(360deg)translate(122px,100px);
     }
     #rotate:hover{
-      opacity: 0.8;
+      
+      transform: rotate(360deg)translateY(-6px);
+      box-shadow:  0px 6px 2px 2px rgb(83, 83, 83),
+                   0px 11px 2px 2px    black
     }
-
-   
+    .americacontain{
+      width: 105px;
+      height: 70px;
+      box-shadow: none;
+      border: 2px solid yellow;
+      position: absolute;
+      z-index: 5555555;
+      transform: rotate(360deg);
+      top: 20%;
+      right: 10%;
+      border-bottom-left-radius: 40%;
+      border-bottom-right-radius: 10%;
+      border-top-right-radius: 40%;
+      border-top-left-radius: 10%;
+      font-size: 30px;
+      font-family: 'Orbitron', sans-serif;
+      background: rgb(233, 233, 233);
+      text-shadow: 5px 5px 5px rgb(121, 120, 120);
+      box-shadow: 3px 3px 3px 3px black ;                
+      animation: fadeInRight 4s 0s 1;
+    }
+    #america{
+      color: rgb(70, 70, 70);
+      width:100px;
+      height: 68px;
+      box-shadow: none;
+      border: none;
+      position: absolute;
+      z-index: 5555555;
+      transform: rotate(360deg);
+      top: -12%;
+      right: 2px;
+      border-bottom-left-radius: 40%;
+      border-bottom-right-radius: 10%;
+      border-top-right-radius: 40%;
+      border-top-left-radius: 10%;
+      font-size: 30px;
+      font-family: 'Orbitron', sans-serif;
+      background: white;
+      /* text-shadow: 5px 5px 5px rgb(121, 120, 120); */
+      box-shadow: 
+                  0px 5px 1px 3px rgb(133, 133, 133) ;
+    }
+    .japancontain{
+      width: 105px;
+      height: 70px;
+      box-shadow: none;
+      border: 2px solid yellow;
+      position: absolute;
+      z-index: 5555555;
+      transform: rotate(360deg);
+      top: 28%;
+      right: 5%;
+      border-bottom-left-radius: 40%;
+      border-bottom-right-radius: 10%;
+      border-top-right-radius: 40%;
+      border-top-left-radius: 10%;
+      font-size: 30px;
+      font-family: 'Orbitron', sans-serif;
+      background: white;
+      text-shadow: 5px 5px 5px rgb(121, 120, 120);
+      box-shadow: 
+                  3px 3px 3px 3px black ;
+      animation: fadeInRight 4s 1s 1 backwards;            
+    }
+    #japan{
+      color: rgb(70, 70, 70);
+      width:100px;
+      height: 68px;
+      box-shadow: none;
+      border: none;
+      position: absolute;
+      z-index: 5555555;
+      transform: rotate(360deg);
+      top: -12%;
+      right: 2px;
+      border-bottom-left-radius: 40%;
+      border-bottom-right-radius: 10%;
+      border-top-right-radius: 40%;
+      border-top-left-radius: 10%;
+      font-size: 30px;
+      font-family: 'Orbitron', sans-serif;
+      background: white;
+      /* text-shadow: 5px 5px 5px rgb(121, 120, 120); */
+      box-shadow: 
+                  0px 5px 1px 3px rgb(133, 133, 133) ;
+    }
+    .auscontain{
+      width: 105px;
+      height: 70px;
+      box-shadow: none;
+      border: 2px solid yellow;
+      position: absolute;
+      z-index: 5555555;
+      transform: rotate(360deg);
+      top: 36%;
+      right: 0%;
+      border-bottom-left-radius: 40%;
+      border-bottom-right-radius: 10%;
+      border-top-right-radius: 40%;
+      border-top-left-radius: 10%;
+      font-size: 30px;
+      font-family: 'Orbitron', sans-serif;
+      background: white;
+      text-shadow: 5px 5px 5px rgb(121, 120, 120);
+      box-shadow: 
+                  3px 3px 3px 3px black ;
+       animation: fadeInRight 4s 2s 1 backwards;
+    }
+    #aus{
+      color: rgb(70, 70, 70);
+      width:100px;
+      height: 68px;
+      box-shadow: none;
+      border: none;
+      position: absolute;
+      z-index: 5555555;
+      transform: rotate(360deg);
+      top: -12%;
+      right: 2px;
+      border-bottom-left-radius: 40%;
+      border-bottom-right-radius: 10%;
+      border-top-right-radius: 40%;
+      border-top-left-radius: 10%;
+      font-size: 30px;
+      font-family: 'Orbitron', sans-serif;
+      background: rgb(255, 255, 255);
+      /* text-shadow: 5px 5px 5px rgb(121, 120, 120); */
+      box-shadow: 
+                  0px 5px 1px 3px rgb(133, 133, 133) ;
+    }
+    #america:hover{
+     background: linear-gradient(white,rgb(176, 213, 255)); 
+     transition-duration: 0.2s; 
+     transform: translateY(-10px);
+     box-shadow: 0px 5px 1px 3px rgb(133, 133, 133),0px 15px 1px 3px rgb(47, 47, 47);
+     color: black;
+    
+    }
+  
+    #japan:hover{
+     background: linear-gradient(white,pink);  
+     transition-duration: 0.2s; 
+     transform: translateY(-10px);
+     box-shadow: 0px 5px 1px 3px rgb(133, 133, 133),0px 15px 1px 3px rgb(47, 47, 47);
+     color: black;
+    }
+    #aus:hover{
+      background: linear-gradient(white,rgb(150, 243, 150));  
+     transition-duration: 0.2s; 
+     transform: translateY(-10px);
+     box-shadow: 0px 5px 1px 3px rgb(133, 133, 133),0px 15px 1px 3px rgb(47, 47, 47);
+     color: black;
+    }
+    #america:active{
+      box-shadow: none;
+      /* background-color: rgb(218, 218, 218); */
+      transform: translateY(8px);
+      color: black;
+    }
+    #aus:active{
+      box-shadow: none;
+      /* background-color: rgb(218, 218, 218); */
+      transform: translateY(8px);
+      color: black;
+    }
+    #japan:active{
+      box-shadow: none;
+      /* background-color: rgb(218, 218, 218); */
+      transform: translateY(8px);
+      color: black;
+    }
+    
+    
+    
 </style>
 </head>
 <body>
  <div id="bigg">
+  <div class="americacontain">
+    <button id="america">
+      USA
+    </button>
+  </div>
+  
+  <div class="japancontain">
+    <button id="japan">
+      Jap
+    </button>
+  </div>
+  
+  <div class="auscontain">
+    <button id="aus">
+      Aus
+    </button>
+  </div>
+ 
+
   <div id="circle"></div>
   <div id="circle1"></div>
   <div id="choose1">
@@ -628,6 +853,19 @@
       circle1.style.animation=`run  50s 0s infinite linear `
       weekcircle.style.animation=`run 30s 0s infinite reverse linear`
     }
+   
+   var america = document.getElementById("america")
+   var japan   = document.getElementById("japan")
+   var aus = document.getElementById("aus")
+   america.onclick =function(){
+    window.open("americatime.html","newwindow","height = 300,width = 500, top =300, left =300")
+   } ;
+   japan.onclick =function(){
+    window.open("japantime.html","newwindow","height = 350,width = 500, top =300, left =300")
+   };
+   aus.onclick =function(){
+    window.open("australiatime.html","newwindow","height = 300,width = 500, top =300, left =300")
+   } 
   
 </script>
 </body>

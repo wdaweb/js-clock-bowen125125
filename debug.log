@@ -1,0 +1,4 @@
+[0919/015116.834:ERROR:process_reader_win.cc(151)] SuspendThread: 存取被拒。 (0x5)
+[0919/015116.835:ERROR:process_reader_win.cc(151)] SuspendThread: 存取被拒。 (0x5)
+[0919/015116.835:ERROR:process_reader_win.cc(123)] NtOpenThread: {拒?存取} 程序已請求存取一物件，但未被授與存取權。 (0xc0000022)
+[0919/015116.835:ERROR:exception_snapshot_win.cc(99)] thread ID 8552 not found in process
