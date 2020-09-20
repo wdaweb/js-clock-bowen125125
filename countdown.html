@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./fontawesome/css/all.css">
+  <style>
+    body{
+      margin: 0%;
+      padding: 0%;
+      border: none;
+
+    }
+    input{
+    
+      border-radius: 50px 0px 0px 50px;
+      width: 300px;
+      height: 70px;
+      font-size: 50px;
+      outline: none;
+      text-align: center;
+     
+    }
+    #container{
+      background-color: rgb(233, 233, 233);
+      height: 450px;
+      width: 600px;
+      font-family: 'Piedra', cursive;
+      font-size: 50px;
+      background-color: black;
+      display: flex;
+      justify-content: flex-start;
+      padding: 20px;
+      position: relative;
+    }
+    button{
+      border: 1px solid pink;
+      width: 100px;
+      height: 76px;
+      outline: none;
+    }
+    button:hover{
+      cursor: pointer;
+    }
+    #showtime{
+      font-size: 200px;
+      position: absolute;
+      top: 180px;
+      text-align: center;
+      width: 580px;
+      height: 300px;
+     
+    }
+    #stop {
+      width: 90px;
+      height: 76px;
+      border-radius: 0px 50px 50px 0px;    
+    }
+    a{
+      text-decoration: none;
+    }
+    i{
+      font-size: 30px;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="container">
+
+    <input type="text" id="time" placeholder="Enter Sec"
+  value=""><br>
+   <button value="start" onclick="count();">Start</button>
+   
+
+   <button id="stop"onclick="javascript:window.location.reload()"><i class="fas fa-sync-alt"></i></button>
+  <div id="showtime" style="color:red"></div>
+  
+  </div>
+  
+  
+  <script>
+    
+    function count(){
+      var time = parseInt(document.getElementById("time").value)
+      const showtime = document.getElementById("showtime")
+      function countdown(){
+        showtime.innerHTML= `${time}`;
+        time--
+        if(time<0){
+          alert("時間到")
+          clearInterval(count)
+        }
+      }
+    var count = setInterval(countdown,1000)
+         
+    }
+    function stop(){
+      clearInterval(count)
+    }
+    
+  </script>
+</body>
+</html>
